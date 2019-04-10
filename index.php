@@ -2,6 +2,7 @@
 /** Another test project...*/
 /**Trang Luu
  *10 April 2019
+ * Controller page
  */
 
 //Turn on error reporting
@@ -20,7 +21,9 @@ $f3->set('DEBUG',3);
 //Define a default route (use backlash / )
 $f3->route('GET /', function()
 {
-    echo'<h1>Hola!</h1>';
+    //Display a view-set view as new template and echo out the view
+    $view = new Template();
+    echo $view->render('views/home2.html');
 });
 
 //Run fat free F3
